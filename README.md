@@ -2,7 +2,7 @@
 
 A fictional game server just went down. A suspicious sign-in landed around the same time. Put the logs together and see what the evidence actually supports.
 
-[Play the case on Midnight Packet](https://packet-arcade.solehyssop8.chatgpt.site/labs/incident-black-box/)
+[Play the case on Midnight Packet](https://midnightpacket.dev/labs/incident-black-box/)
 
 ## Play a case
 
