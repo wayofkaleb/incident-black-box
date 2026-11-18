@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Piece together a fictional game server outage from three logs.">
+  <title>Incident Black Box | Midnight Packet</title>
+  <link rel="icon" href="assets/midnight-envelope.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="lab.css">
+  <link rel="stylesheet" href="page.css">
+  <script src="case-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="https://packet-arcade.solehyssop8.chatgpt.site/"><img class="wordmark-icon" src="assets/midnight-envelope.png" width="36" height="36" alt=""><span>midnight.packet</span></a><nav aria-label="Main navigation"><a href="https://packet-arcade.solehyssop8.chatgpt.site/#directory">All labs</a><a href="https://github.com/wayofkaleb">GitHub</a></nav></div></header>
+  <main class="wrap lab-main black-box" id="main" tabindex="-1">
+    <div class="case-header">
+      <div class="lab-intro">
+        <h1>Incident <span>Black Box</span></h1>
+        <p>A game server is down. Read the logs, pin the records that matter, and make the call.</p>
+      </div>
+      <section class="case-file" aria-labelledby="case-title">
+        <p class="lab-note">Case <span id="case-id"></span> / fictional incident</p>
+        <h2 id="case-title">Case file</h2>
+        <p id="case-brief"></p>
+      </section>
+    </div>
+    <noscript><p class="lab-note">Enable JavaScript to open the logs and play Incident Black Box.</p></noscript>
+    <div id="investigation" class="lab-stack" hidden>
+      <div class="investigation-grid">
+        <section class="lab-panel" aria-labelledby="logs-heading">
+          <h2 id="logs-heading">Open the logs</h2>
+          <div class="log-switcher" id="log-switcher" role="group" aria-label="Log source"></div>
+          <div class="lab-stack" id="source-panel">
+            <p class="lab-note" id="source-description"></p>
+            <ul class="log-feed" id="source-entries" aria-label="Log records"></ul>
+          </div>
+        </section>
+        <section class="lab-panel evidence-panel" aria-labelledby="timeline-heading">
+          <div class="section-heading">
+            <h2 id="timeline-heading" tabindex="-1">Evidence timeline</h2>
+            <p class="evidence-count" id="evidence-count"></p>
+          </div>
+          <p class="lab-note" id="timeline-description"></p>
+          <p class="empty-timeline" id="timeline-empty">No records pinned yet.</p>
+          <ol class="evidence-list" id="timeline"></ol>
+        </section>
+      </div>
+      <section class="lab-panel finding-panel" aria-labelledby="finding-heading">
+        <h2 id="finding-heading">What took the server down?</h2>
+        <form class="lab-stack" id="finding-form">
+          <fieldset class="finding-options" aria-labelledby="finding-heading">
+            <div id="cause-options" class="lab-stack"></div>
+          </fieldset>
+          <div class="lab-controls">
+            <button class="lab-button lab-button--primary" id="check-finding" type="submit" disabled>Check finding</button>
+            <button class="lab-button" id="reset-case" type="button">Reset case</button>
+          </div>
+        </form>
+        <div class="finding-feedback" id="finding-feedback" hidden>
+          <h3 id="feedback-heading" tabindex="-1"></h3>
+          <p id="feedback-copy"></p>
+          <div class="lab-stack" id="completed-report" hidden>
+            <h4>Still open</h4>
+            <ul id="open-questions"></ul>
+            <div class="lab-controls"><button class="lab-button lab-button--primary" id="download-report" type="button">Download incident report</button></div>
+          </div>
+        </div>
+      </section>
+      <p class="visually-hidden" id="status" role="status"></p>
+    </div>
+  </main>
+</body>
+</html>
